@@ -11,21 +11,6 @@ function Light(name, options, levels) {
 Light.prototype = Object.create(Device.prototype);
 Light.prototype.constructor = Light;
 
-// Array.prototype.nextLevel = function () {
-//   return this[++this.__currLevel];
-// };
-// Array.prototype.prevLevel = function () {
-//   return this[--this.current];
-// };
-
-// Array.prototype.nextOption = function () {
-//   return this[++this.__currOption];
-// };
-
-// Array.prototype.prevOption = function () {
-//   return this[--this.__currOption];
-// };
-
 Light.prototype.seOption = function (option) {
   if (
     typeof option !== "number" ||
@@ -55,7 +40,7 @@ Light.prototype.incrOption = function () {
     this.__currOption = this.__options[0];
   } else {
     this.__currOption =
-      this.__options[this.__options.indexOf(this.__currOption) + 1]; // how to increase
+      this.__options[this.__options.indexOf(this.__currOption) + 1];
   }
 };
 
@@ -64,7 +49,7 @@ Light.prototype.decrOption = function () {
     this.__currOption = this.__options[this.__options.length - 1];
   } else {
     this.__currOption =
-      this.__options[this.__options.indexOf(this.__currOption) - 1]; // how to decrease
+      this.__options[this.__options.indexOf(this.__currOption) - 1];
   }
 };
 
@@ -73,7 +58,7 @@ Light.prototype.incrLevel = function () {
     this.__currLevel = this.__levels[0];
   } else {
     this.__currLevel =
-      this.__levels[this.__levels.indexOf(this.__currLevel) + 1]; // how to increase
+      this.__levels[this.__levels.indexOf(this.__currLevel) + 1];
   }
 };
 
@@ -82,7 +67,7 @@ Light.prototype.decrLevel = function () {
     this.__currLevel = this.__levels[this.__levels.length - 1];
   } else {
     this.__currLevel =
-      this.__levels[this.__levels.indexOf(this.__currLevel) - 1]; // how to decrease
+      this.__levels[this.__levels.indexOf(this.__currLevel) - 1];
   }
 };
 

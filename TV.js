@@ -1,7 +1,6 @@
 "use strict";
 
 function TV(name, numChannels) {
-  // father`s constructor
   Device.call(this, name);
   this.__numChannels = numChannels;
   this.__currChannel = 1;
@@ -10,9 +9,7 @@ function TV(name, numChannels) {
   this.__currVolume = 5;
 }
 
-// Наслідування прототипу батьківського типа
 TV.prototype = Object.create(Device.prototype);
-// Відновлення посилання на constructor
 TV.prototype.constructor = TV;
 
 TV.prototype.setChannel = function (channel) {

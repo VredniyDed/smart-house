@@ -1,7 +1,6 @@
 "use strict";
 
 function Refrigerator(name, maxFdTemp, minFdTemp, maxFzTemp, minFzTemp) {
-  // father`s constructor
   Device.call(this, name);
   this.__currFdTemp = 3;
   this.__currFzTemp = -6;
@@ -11,9 +10,7 @@ function Refrigerator(name, maxFdTemp, minFdTemp, maxFzTemp, minFzTemp) {
   this.__minFzTemp = minFzTemp;
 }
 
-// Наслідування прототипу батьківського типа
 Refrigerator.prototype = Object.create(Device.prototype);
-// Відновлення посилання на constructor
 Refrigerator.prototype.constructor = Refrigerator;
 
 Refrigerator.prototype.setFdTemp = function (temperature) {
